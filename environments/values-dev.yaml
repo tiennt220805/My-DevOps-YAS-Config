@@ -1,0 +1,140 @@
+services:
+  tax-service:
+    serviceName: tax
+    image:
+      repository: thanhtien2208/yas-tax
+      tag: main
+    containerPort: 8080
+    nodePort: 30001
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  order-service:
+    serviceName: order
+    image:
+      repository: thanhtien2208/yas-order
+      tag: main
+    containerPort: 8080
+    nodePort: 30002
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  media-service:
+    serviceName: media
+    image:
+      repository: thanhtien2208/yas-media
+      tag: main
+    containerPort: 8080
+    nodePort: 30003
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  product-service:
+    serviceName: product
+    image:
+      repository: thanhtien2208/yas-product
+      tag: main
+    containerPort: 8080
+    nodePort: 30004
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  cart-service:
+    serviceName: cart
+    image:
+      repository: thanhtien2208/yas-cart
+      tag: main
+    containerPort: 8080
+    nodePort: 30005
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  rating-service:
+    serviceName: rating
+    image:
+      repository: thanhtien2208/yas-rating
+      tag: main
+    containerPort: 8080
+    nodePort: 30006
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  customer-service:
+    serviceName: customer
+    image:
+      repository: thanhtien2208/yas-customer
+      tag: main
+    containerPort: 8080
+    nodePort: 30007
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  location-service:
+    serviceName: location
+    image:
+      repository: thanhtien2208/yas-location
+      tag: main
+    containerPort: 8080
+    nodePort: 30008
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  inventory-service:
+    serviceName: inventory
+    image:
+      repository: thanhtien2208/yas-inventory
+      tag: main
+    containerPort: 8080
+    nodePort: 30009
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
+
+  search-service:
+    serviceName: search
+    image:
+      repository: thanhtien2208/yas-search
+      tag: main
+    containerPort: 8080
+    nodePort: 30010
+    resources:
+      limits:
+        memory: "256Mi"
+      requests:
+        memory: "128Mi"
+    initialDelaySeconds: 40
