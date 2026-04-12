@@ -1,35 +1,42 @@
+{{- range $key, $val := .Values }}
+{{- if kindIs "map" $val }}
+{{- if $val.image }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "{{ .Values.serviceName }}"
+  name: {{ $val.serviceName }}
   labels:
-    app: "{{ .Values.serviceName }}"
+    app: {{ $val.serviceName }}
 spec:
-  replicas: "{{ .Values.replicaCount }}"
+  replicas: {{ $val.replicaCount }}
   selector:
     matchLabels:
-      app: "{{ .Values.serviceName }}"
+      app: {{ $val.serviceName }}
   template:
     metadata:
       labels:
-        app: "{{ .Values.serviceName }}"
+        app: {{ $val.serviceName }}
     spec:
       containers:
-        - name: "{{ .Values.serviceName }}"
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        - name: {{ $val.serviceName }}
+          image: "{{ $val.image.repository }}:{{ $val.image.tag }}"
           ports:
-            - containerPort: "{{ .Values.containerPort }}"
+            - containerPort: {{ $val.containerPort }}
           imagePullPolicy: IfNotPresent
           resources:
             limits:
-              memory: "{{ .Values.resources.limits.memory }}"
-              cpu: "{{ .Values.resources.limits.cpu }}"
+              memory: {{ $val.resources.limits.memory }}
+              cpu: {{ $val.resources.limits.cpu }}
             requests:
-              memory: "{{ .Values.resources.requests.memory }}"
-              cpu: "{{ .Values.resources.requests.cpu }}"
+              memory: {{ $val.resources.requests.memory }}
+              cpu: {{ $val.resources.requests.cpu }}
           readinessProbe:
             httpGet:
-              path: "{{ .Values.readinessPath }}"
-              port: "{{ .Values.containerPort }}"
-            initialDelaySeconds: "{{ .Values.initialDelaySeconds }}"
+              path: {{ $val.readinessPath }}
+              port: {{ $val.containerPort }}
+            initialDelaySeconds: {{ $val.initialDelaySeconds }}
             periodSeconds: 10
+---
+{{- end }}
+{{- end }}
+{{- end }}
