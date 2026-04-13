@@ -167,6 +167,6 @@ search-service:
       memory: "512Mi"
     requests:
       memory: "256Mi"
-  initialDelaySeconds: 40
+  initialDelaySeconds: 120
   useElastic: true
   useKafka: true
