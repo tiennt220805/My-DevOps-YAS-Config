@@ -5,6 +5,10 @@ metadata:
   namespace: dev
 spec:
   version: 8.8.1
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true # disable HTTPS for dev environment
   nodeSets:
     - name: default
       count: 1
