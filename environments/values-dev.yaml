@@ -72,7 +72,8 @@ cart-service:
   image:
     repository: thanhtien2208/yas-cart
     tag: main
-  containerPort: 8080
+  containerPort: 8084
+  readinessPath: /cart/actuator/health
   nodePort: 30005
   resources:
     limits:
