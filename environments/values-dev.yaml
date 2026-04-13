@@ -21,7 +21,8 @@ order-service:
   image:
     repository: thanhtien2208/yas-order
     tag: main
-  containerPort: 8080
+  containerPort: 8085
+  readinessPath: /order/actuator/health
   nodePort: 30002
   resources:
     limits:
