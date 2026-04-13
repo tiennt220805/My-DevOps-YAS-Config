@@ -164,9 +164,9 @@ search-service:
   nodePort: 30010
   resources:
     limits:
-      memory: "512Mi"
+      memory: "800Mi"
     requests:
       memory: "256Mi"
-  initialDelaySeconds: 120
+  initialDelaySeconds: 180
   useElastic: true
   useKafka: true
