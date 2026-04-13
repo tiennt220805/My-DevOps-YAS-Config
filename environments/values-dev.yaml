@@ -11,6 +11,8 @@ tax-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useElastic: false
+  useKafka: false
 
 order-service:
   serviceName: order
@@ -25,6 +27,8 @@ order-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useKafka: true
+  useElastic: false
 
 media-service:
   serviceName: media
@@ -39,6 +43,8 @@ media-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useElastic: false
+  useKafka: false
 
 product-service:
   serviceName: product
@@ -53,6 +59,8 @@ product-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useElastic: false
+  useKafka: false
 
 cart-service:
   serviceName: cart
@@ -67,6 +75,8 @@ cart-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useElastic: false
+  useKafka: false
 
 rating-service:
   serviceName: rating
@@ -81,6 +91,8 @@ rating-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useElastic: false
+  useKafka: false
 
 customer-service:
   serviceName: customer
@@ -95,6 +107,8 @@ customer-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useElastic: false
+  useKafka: false
 
 location-service:
   serviceName: location
@@ -109,6 +123,8 @@ location-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useKafka: true
+  useElastic: false
 
 inventory-service:
   serviceName: inventory
@@ -123,6 +139,8 @@ inventory-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useKafka: true
+  useElastic: false
 
 search-service:
   serviceName: search
@@ -137,3 +155,5 @@ search-service:
     requests:
       memory: "128Mi"
   initialDelaySeconds: 40
+  useElastic: true
+  useKafka: true
