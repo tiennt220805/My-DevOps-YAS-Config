@@ -1,5 +1,6 @@
 tax-service:
   serviceName: tax
+  replicaCount: 0
   image:
     repository: thanhtien2208/yas-tax
     tag: main
@@ -7,9 +8,9 @@ tax-service:
   nodePort: 30001
   resources:
     limits:
-      memory: "256Mi"
+      memory: "512Mi"
     requests:
-      memory: "128Mi"
+      memory: "256Mi"
   initialDelaySeconds: 40
   useElastic: false
   useKafka: false
@@ -32,6 +33,7 @@ order-service:
 
 media-service:
   serviceName: media
+  replicaCount: 0
   image:
     repository: thanhtien2208/yas-media
     tag: main
@@ -48,6 +50,7 @@ media-service:
 
 product-service:
   serviceName: product
+  replicaCount: 0
   image:
     repository: thanhtien2208/yas-product
     tag: main
@@ -71,15 +74,16 @@ cart-service:
   nodePort: 30005
   resources:
     limits:
-      memory: "256Mi"
+      memory: "512Mi"
     requests:
-      memory: "128Mi"
+      memory: "256Mi"
   initialDelaySeconds: 40
   useElastic: false
   useKafka: false
 
 rating-service:
   serviceName: rating
+  replicaCount: 0
   image:
     repository: thanhtien2208/yas-rating
     tag: main
@@ -96,6 +100,7 @@ rating-service:
 
 customer-service:
   serviceName: customer
+  replicaCount: 0
   image:
     repository: thanhtien2208/yas-customer
     tag: main
@@ -112,6 +117,7 @@ customer-service:
 
 location-service:
   serviceName: location
+  replicaCount: 0
   image:
     repository: thanhtien2208/yas-location
     tag: main
@@ -128,6 +134,7 @@ location-service:
 
 inventory-service:
   serviceName: inventory
+  replicaCount: 0
   image:
     repository: thanhtien2208/yas-inventory
     tag: main
@@ -151,9 +158,9 @@ search-service:
   nodePort: 30010
   resources:
     limits:
-      memory: "256Mi"
+      memory: "512Mi"
     requests:
-      memory: "128Mi"
+      memory: "256Mi"
   initialDelaySeconds: 40
   useElastic: true
   useKafka: true
