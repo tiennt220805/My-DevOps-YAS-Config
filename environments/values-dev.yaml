@@ -159,7 +159,8 @@ search-service:
   image:
     repository: thanhtien2208/yas-search
     tag: main
-  containerPort: 8080
+  containerPort: 8092
+  readinessPath: /search/actuator/health
   nodePort: 30010
   resources:
     limits:
