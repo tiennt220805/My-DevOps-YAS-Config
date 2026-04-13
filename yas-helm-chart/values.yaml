@@ -17,4 +17,4 @@ resources:
     cpu: "100m"
 
 readinessPath: "/actuator/health"
-initialDelaySeconds: 120
+initialDelaySeconds: 40

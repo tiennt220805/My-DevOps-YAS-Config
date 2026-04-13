@@ -29,7 +29,7 @@ order-service:
       memory: "512Mi"
     requests:
       memory: "256Mi"
-  initialDelaySeconds: 40
+  initialDelaySeconds: 80
   useKafka: true
   useElastic: false
 
