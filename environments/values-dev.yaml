@@ -17,6 +17,7 @@ tax-service:
 
 order-service:
   serviceName: order
+  replicaCount: 1
   image:
     repository: thanhtien2208/yas-order
     tag: main
@@ -67,6 +68,7 @@ product-service:
 
 cart-service:
   serviceName: cart
+  replicaCount: 1
   image:
     repository: thanhtien2208/yas-cart
     tag: main
@@ -151,6 +153,7 @@ inventory-service:
 
 search-service:
   serviceName: search
+  replicaCount: 1
   image:
     repository: thanhtien2208/yas-search
     tag: main
