@@ -62,7 +62,7 @@ spec:
             # ======= Elasticsearch Service =======
             {{- if $val.useElastic }}
             - name: ELASTICSEARCH_URL
-              value: "http://elasticsearch-es-http:9200"
+              value: "http://elasticsearch-es-default:9200"
             - name: ELASTICSEARCH_USERNAME
               valueFrom:
                 secretKeyRef:
