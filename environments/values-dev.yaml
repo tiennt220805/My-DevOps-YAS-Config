@@ -133,7 +133,7 @@ location-service:
       memory: "512Mi"
     requests:
       memory: "128Mi"
-  initialDelaySeconds: 80
+  initialDelaySeconds: 100
   useKafka: true
   useElastic: false
 
