@@ -121,7 +121,7 @@ customer-service:
 
 location-service:
   serviceName: location
-  replicaCount: 0
+  replicaCount: 1
   image:
     repository: thanhtien2208/yas-location
     tag: main
@@ -129,10 +129,10 @@ location-service:
   nodePort: 30008
   resources:
     limits:
-      memory: "256Mi"
+      memory: "512Mi"
     requests:
       memory: "128Mi"
-  initialDelaySeconds: 40
+  initialDelaySeconds: 80
   useKafka: true
   useElastic: false
 
@@ -155,7 +155,7 @@ inventory-service:
 
 search-service:
   serviceName: search
-  replicaCount: 1
+  replicaCount: 0
   image:
     repository: thanhtien2208/yas-search
     tag: main
@@ -164,7 +164,7 @@ search-service:
   nodePort: 30010
   resources:
     limits:
-      memory: "800Mi"
+      memory: "512"
     requests:
       memory: "256Mi"
   initialDelaySeconds: 180
