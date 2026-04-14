@@ -108,14 +108,15 @@ customer-service:
   image:
     repository: thanhtien2208/yas-customer
     tag: main
-  containerPort: 8080
+  containerPort: 8088
+  readinessPath: /customer/actuator/health
   nodePort: 30007
   resources:
     limits:
       memory: "512Mi"
     requests:
       memory: "256Mi"
-  initialDelaySeconds: 40
+  initialDelaySeconds: 80
   useElastic: false
   useKafka: false
 
