@@ -125,7 +125,8 @@ location-service:
   image:
     repository: thanhtien2208/yas-location
     tag: main
-  containerPort: 8080
+  containerPort: 8086
+  readinessPath: /location/actuator/health
   nodePort: 30008
   resources:
     limits:
